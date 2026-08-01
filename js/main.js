@@ -14,7 +14,7 @@
     if (toggle) {
       toggle.setAttribute('aria-pressed', theme === 'light' ? 'true' : 'false');
       var label = toggle.querySelector('.toggle-label');
-      if (label) label.textContent = theme === 'light' ? 'Light mode' : 'Dark mode';
+      if (label) label.textContent = theme === 'light' ? 'On' : 'Off';
     }
   }
 

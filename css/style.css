@@ -1,6 +1,6 @@
 /* ==========================================================================
    Viewing the Black Women — Portfolio
-   Theme: Earthy & Ethereal — forest green, umber brown, and rust red accents
+   Theme: Earthy & Ethereal — forest green, burnt orange, and warm yellow accents
    ========================================================================== */
 
 :root {
@@ -16,16 +16,16 @@
   --text-muted: #c8bd9e;
   --text-soft: #96896c;
 
-  --gold: #c08a3e;
-  --gold-bright: #dba658;
-  --magenta: #c43a2a;
-  --magenta-soft: #d1663f;
-  --plum: #2f5233;
+  --gold: #cf9a35;
+  --gold-bright: #edc35f;
+  --magenta: #c2661f;
+  --magenta-soft: #d9862f;
+  --plum: #356039;
 
-  --gradient-hero: radial-gradient(circle at 15% 20%, rgba(196, 58, 42, 0.48), transparent 50%),
-    radial-gradient(circle at 85% 10%, rgba(192, 138, 62, 0.22), transparent 40%),
-    radial-gradient(circle at 50% 100%, rgba(47, 82, 51, 0.5), transparent 60%),
-    linear-gradient(180deg, #1c130f 0%, #14180f 100%);
+  --gradient-hero: radial-gradient(circle at 50% 100%, rgba(53, 96, 57, 0.65), transparent 65%),
+    radial-gradient(circle at 15% 20%, rgba(194, 102, 31, 0.3), transparent 45%),
+    radial-gradient(circle at 85% 10%, rgba(237, 195, 95, 0.22), transparent 40%),
+    linear-gradient(180deg, #171f13 0%, #14180f 100%);
 
   --shadow: 0 20px 50px rgba(0, 0, 0, 0.45);
   --shadow-soft: 0 8px 24px rgba(0, 0, 0, 0.3);
@@ -46,15 +46,15 @@
   --text-muted: #5b4a34;
   --text-soft: #7d6a4f;
 
-  --gold: #8a5a20;
-  --gold-bright: #a5701f;
-  --magenta: #a83422;
-  --magenta-soft: #bb4a2e;
-  --plum: #2f5233;
+  --gold: #8f6212;
+  --gold-bright: #ab7e1c;
+  --magenta: #a35318;
+  --magenta-soft: #b96a2c;
+  --plum: #35603b;
 
-  --gradient-hero: radial-gradient(circle at 15% 20%, rgba(168, 52, 34, 0.22), transparent 50%),
-    radial-gradient(circle at 85% 10%, rgba(138, 90, 32, 0.16), transparent 40%),
-    radial-gradient(circle at 50% 100%, rgba(47, 82, 51, 0.13), transparent 60%),
+  --gradient-hero: radial-gradient(circle at 50% 100%, rgba(53, 96, 59, 0.18), transparent 65%),
+    radial-gradient(circle at 15% 20%, rgba(163, 83, 24, 0.16), transparent 45%),
+    radial-gradient(circle at 85% 10%, rgba(171, 126, 28, 0.15), transparent 40%),
     linear-gradient(180deg, #faf4e6 0%, #f6f0e2 100%);
 
   --shadow: 0 20px 50px rgba(59, 41, 20, 0.12);
@@ -72,14 +72,14 @@
     --text: #2b2013;
     --text-muted: #5b4a34;
     --text-soft: #7d6a4f;
-    --gold: #8a5a20;
-    --gold-bright: #a5701f;
-    --magenta: #a83422;
-    --magenta-soft: #bb4a2e;
-    --plum: #2f5233;
-    --gradient-hero: radial-gradient(circle at 15% 20%, rgba(168, 52, 34, 0.22), transparent 50%),
-      radial-gradient(circle at 85% 10%, rgba(138, 90, 32, 0.16), transparent 40%),
-      radial-gradient(circle at 50% 100%, rgba(47, 82, 51, 0.13), transparent 60%),
+    --gold: #8f6212;
+    --gold-bright: #ab7e1c;
+    --magenta: #a35318;
+    --magenta-soft: #b96a2c;
+    --plum: #35603b;
+    --gradient-hero: radial-gradient(circle at 50% 100%, rgba(53, 96, 59, 0.18), transparent 65%),
+      radial-gradient(circle at 15% 20%, rgba(163, 83, 24, 0.16), transparent 45%),
+      radial-gradient(circle at 85% 10%, rgba(171, 126, 28, 0.15), transparent 40%),
       linear-gradient(180deg, #faf4e6 0%, #f6f0e2 100%);
     --shadow: 0 20px 50px rgba(59, 41, 20, 0.12);
     --shadow-soft: 0 8px 24px rgba(59, 41, 20, 0.08);
@@ -307,10 +307,10 @@ button:focus-visible {
   outline: 3px solid var(--magenta-soft);
   outline-offset: 2px;
 }
-.theme-toggle .icon-sun { display: none; }
-.theme-toggle .icon-moon { display: inline; }
-:root[data-theme='light'] .theme-toggle .icon-sun { display: inline; }
-:root[data-theme='light'] .theme-toggle .icon-moon { display: none; }
+.theme-toggle .icon-bulb-on { display: none; }
+.theme-toggle .icon-bulb-off { display: inline; }
+:root[data-theme='light'] .theme-toggle .icon-bulb-on { display: inline; }
+:root[data-theme='light'] .theme-toggle .icon-bulb-off { display: none; }
 
 /* Tabs */
 .tabs {
@@ -342,7 +342,7 @@ button:focus-visible {
 }
 
 .tab-btn[aria-selected='true'] {
-  background: linear-gradient(100deg, var(--magenta) 0%, var(--magenta) 55%, var(--plum) 100%);
+  background: linear-gradient(100deg, var(--plum) 0%, var(--plum) 55%, var(--magenta) 100%);
   color: #f8f1e0;
   box-shadow: var(--shadow-soft);
 }
@@ -451,7 +451,7 @@ main {
 .btn-primary {
   background: linear-gradient(100deg, var(--gold-bright), var(--magenta));
   color: #1c1610;
-  box-shadow: 0 10px 28px rgba(196, 58, 42, 0.4);
+  box-shadow: 0 10px 28px rgba(194, 102, 31, 0.4);
 }
 
 .btn-ghost {
@@ -551,7 +551,7 @@ section.alt {
   width: 44px;
   height: 44px;
   border-radius: 12px;
-  background: linear-gradient(135deg, var(--magenta) 0%, var(--magenta) 50%, var(--plum) 100%);
+  background: linear-gradient(135deg, var(--plum) 0%, var(--plum) 50%, var(--magenta) 100%);
   display: flex;
   align-items: center;
   justify-content: center;
