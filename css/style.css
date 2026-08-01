@@ -159,7 +159,7 @@ a {
   50% { opacity: 0.75; transform: scale(1.15) rotate(25deg); }
 }
 
-/* Cloud backdrop — light mode only */
+/* Cloud backdrop — light mode only, scattered behind content like the stars */
 .cloud-field {
   position: fixed;
   inset: 0;
@@ -173,9 +173,12 @@ a {
 }
 .cloud {
   position: absolute;
+  width: 5em;
+  height: 1.6em;
   background: #ffffff;
-  border-radius: 50px;
-  animation: drift 70s linear infinite;
+  border-radius: 3em;
+  box-shadow: 0 0.3em 0.7em rgba(43, 32, 19, 0.08);
+  animation: drift 70s ease-in-out infinite;
 }
 .cloud::before,
 .cloud::after {
@@ -184,29 +187,15 @@ a {
   background: inherit;
   border-radius: 50%;
 }
-.cloud-1 { top: 8%; left: 8%; width: 120px; height: 40px; opacity: 0.55; animation-duration: 65s; }
-.cloud-1::before { width: 60px; height: 60px; top: -28px; left: 15px; }
-.cloud-1::after { width: 44px; height: 44px; top: -20px; right: 10px; }
-
-.cloud-2 { top: 18%; right: 10%; width: 160px; height: 50px; opacity: 0.4; animation-duration: 85s; animation-direction: reverse; }
-.cloud-2::before { width: 70px; height: 70px; top: -32px; left: 20px; }
-.cloud-2::after { width: 54px; height: 54px; top: -24px; right: 20px; }
-
-.cloud-3 { top: 55%; left: 4%; width: 100px; height: 34px; opacity: 0.35; animation-duration: 75s; }
-.cloud-3::before { width: 50px; height: 50px; top: -22px; left: 12px; }
-.cloud-3::after { width: 38px; height: 38px; top: -16px; right: 10px; }
-
-.cloud-4 { top: 72%; right: 6%; width: 140px; height: 46px; opacity: 0.45; animation-duration: 95s; animation-direction: reverse; }
-.cloud-4::before { width: 64px; height: 64px; top: -28px; left: 18px; }
-.cloud-4::after { width: 48px; height: 48px; top: -20px; right: 16px; }
+.cloud::before { width: 2.4em; height: 2.4em; top: -1.1em; left: 0.6em; }
+.cloud::after { width: 1.8em; height: 1.8em; top: -0.8em; right: 0.4em; }
 
 @keyframes drift {
-  0% { transform: translateX(0); }
-  50% { transform: translateX(40px); }
-  100% { transform: translateX(0); }
+  0%, 100% { transform: translateX(0); }
+  50% { transform: translateX(30px); }
 }
 
-/* Vine & leaf backdrop — dark mode only */
+/* Vine & leaf backdrop — dark mode only, scattered behind content like the stars */
 .vine-field {
   position: fixed;
   inset: 0;
@@ -218,15 +207,17 @@ a {
 :root[data-theme='light'] .vine-field {
   display: none;
 }
-.vine {
+.leaf {
   position: absolute;
-  width: 160px;
-  height: 70vh;
-  max-height: 700px;
-  opacity: 0.5;
+  display: block;
+  border-radius: 0% 100% 0% 100%;
+  animation: sway 7s ease-in-out infinite;
 }
-.vine-left { left: -15px; bottom: -15px; }
-.vine-right { right: -15px; top: -15px; }
+
+@keyframes sway {
+  0%, 100% { transform: rotate(var(--leaf-rot, 0deg)) scale(1); }
+  50% { transform: rotate(calc(var(--leaf-rot, 0deg) + 8deg)) scale(1.05); }
+}
 
 /* ==========================================================================
    Header / Nav

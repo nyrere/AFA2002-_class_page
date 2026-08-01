@@ -104,10 +104,55 @@
     }
   }
 
+  function initClouds() {
+    var field = document.getElementById('cloudField');
+    if (!field) return;
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    var count = window.innerWidth < 640 ? 6 : 10;
+    for (var i = 0; i < count; i++) {
+      var c = document.createElement('div');
+      c.className = 'cloud';
+      c.style.left = Math.random() * 100 + '%';
+      c.style.top = Math.random() * 100 + '%';
+      var size = (Math.random() * 8 + 10).toFixed(1);
+      c.style.fontSize = size + 'px';
+      c.style.opacity = (Math.random() * 0.35 + 0.45).toFixed(2);
+      c.style.animationDelay = (Math.random() * -60).toFixed(1) + 's';
+      c.style.animationDuration = (55 + Math.random() * 40).toFixed(1) + 's';
+      field.appendChild(c);
+    }
+  }
+
+  function initLeaves() {
+    var field = document.getElementById('vineField');
+    if (!field) return;
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    var colors = ['var(--plum)', '#4a7a4f', '#3d6642'];
+    var count = window.innerWidth < 640 ? 16 : 28;
+    for (var i = 0; i < count; i++) {
+      var l = document.createElement('span');
+      l.className = 'leaf';
+      l.style.left = Math.random() * 100 + '%';
+      l.style.top = Math.random() * 100 + '%';
+      var size = (Math.random() * 10 + 10).toFixed(1);
+      l.style.width = size + 'px';
+      l.style.height = size + 'px';
+      l.style.background = colors[i % colors.length];
+      l.style.opacity = (Math.random() * 0.3 + 0.35).toFixed(2);
+      var rotation = Math.floor(Math.random() * 360);
+      l.style.setProperty('--leaf-rot', rotation + 'deg');
+      l.style.animationDelay = (Math.random() * -8).toFixed(2) + 's';
+      l.style.animationDuration = (5 + Math.random() * 4).toFixed(2) + 's';
+      field.appendChild(l);
+    }
+  }
+
   document.addEventListener('DOMContentLoaded', function () {
     initTheme();
     initTabs();
     initSparkles();
+    initClouds();
+    initLeaves();
     var toggle = document.getElementById('themeToggle');
     if (toggle) toggle.addEventListener('click', toggleTheme);
 
