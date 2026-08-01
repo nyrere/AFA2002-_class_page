@@ -92,41 +92,25 @@
   }
 
   function initSubtabs() {
-    document.querySelectorAll('.subtabs').forEach(function (nav) {
-      var buttons = Array.prototype.slice.call(nav.querySelectorAll('.subtab-btn'));
-      var panelRoot = nav.closest('.panel');
-      if (!panelRoot || !buttons.length) return;
+    document.querySelectorAll('.subtabs-select').forEach(function (select) {
+      var panelRoot = select.closest('.panel');
+      if (!panelRoot) return;
       var subpanels = Array.prototype.slice.call(panelRoot.querySelectorAll('.subpanel'));
+      if (!subpanels.length) return;
 
       function activate(key) {
-        buttons.forEach(function (btn) {
-          var isMatch = btn.getAttribute('data-subtab') === key;
-          btn.setAttribute('aria-selected', isMatch ? 'true' : 'false');
-          btn.tabIndex = isMatch ? 0 : -1;
-        });
         subpanels.forEach(function (sp) {
           sp.classList.toggle('active', sp.getAttribute('data-subpanel') === key);
         });
+        if (select.value !== key) select.value = key;
       }
 
-      buttons.forEach(function (btn, index) {
-        btn.addEventListener('click', function () {
-          activate(btn.getAttribute('data-subtab'));
-        });
-        btn.addEventListener('keydown', function (e) {
-          var newIndex = null;
-          if (e.key === 'ArrowRight') newIndex = (index + 1) % buttons.length;
-          if (e.key === 'ArrowLeft') newIndex = (index - 1 + buttons.length) % buttons.length;
-          if (newIndex !== null) {
-            e.preventDefault();
-            buttons[newIndex].focus();
-            activate(buttons[newIndex].getAttribute('data-subtab'));
-          }
-        });
+      select.addEventListener('change', function () {
+        activate(select.value);
       });
 
       panelRoot._activateSubtab = activate;
-      activate(buttons[0].getAttribute('data-subtab'));
+      activate(select.value);
     });
   }
 
