@@ -1,0 +1,117 @@
+(function () {
+  'use strict';
+
+  var root = document.documentElement;
+  var THEME_KEY = 'vbw-theme';
+
+  function getSystemTheme() {
+    return window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+  }
+
+  function applyTheme(theme) {
+    root.setAttribute('data-theme', theme);
+    var toggle = document.getElementById('themeToggle');
+    if (toggle) {
+      toggle.setAttribute('aria-pressed', theme === 'light' ? 'true' : 'false');
+      var label = toggle.querySelector('.toggle-label');
+      if (label) label.textContent = theme === 'light' ? 'Light mode' : 'Dark mode';
+    }
+  }
+
+  function initTheme() {
+    var saved = localStorage.getItem(THEME_KEY);
+    var theme = saved || getSystemTheme();
+    applyTheme(theme);
+  }
+
+  function toggleTheme() {
+    var current = root.getAttribute('data-theme') || getSystemTheme();
+    var next = current === 'light' ? 'dark' : 'light';
+    localStorage.setItem(THEME_KEY, next);
+    applyTheme(next);
+  }
+
+  function initTabs() {
+    var tabButtons = Array.prototype.slice.call(document.querySelectorAll('.tab-btn'));
+    var panels = Array.prototype.slice.call(document.querySelectorAll('.panel'));
+
+    function activate(id, pushHash) {
+      tabButtons.forEach(function (btn) {
+        var isMatch = btn.getAttribute('data-tab') === id;
+        btn.setAttribute('aria-selected', isMatch ? 'true' : 'false');
+        btn.tabIndex = isMatch ? 0 : -1;
+      });
+      panels.forEach(function (panel) {
+        panel.classList.toggle('active', panel.id === id);
+      });
+      if (pushHash) {
+        history.replaceState(null, '', '#' + id);
+      }
+      var activeBtn = document.querySelector('.tab-btn[data-tab="' + id + '"]');
+      if (activeBtn) activeBtn.scrollIntoView({ block: 'nearest', inline: 'center', behavior: 'smooth' });
+    }
+
+    tabButtons.forEach(function (btn, index) {
+      btn.addEventListener('click', function () {
+        activate(btn.getAttribute('data-tab'), true);
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+      btn.addEventListener('keydown', function (e) {
+        var newIndex = null;
+        if (e.key === 'ArrowRight') newIndex = (index + 1) % tabButtons.length;
+        if (e.key === 'ArrowLeft') newIndex = (index - 1 + tabButtons.length) % tabButtons.length;
+        if (newIndex !== null) {
+          e.preventDefault();
+          tabButtons[newIndex].focus();
+          activate(tabButtons[newIndex].getAttribute('data-tab'), true);
+        }
+      });
+    });
+
+    document.querySelectorAll('[data-goto]').forEach(function (el) {
+      el.addEventListener('click', function (e) {
+        e.preventDefault();
+        activate(el.getAttribute('data-goto'), true);
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    });
+
+    var initial = (location.hash || '').replace('#', '');
+    var validIds = panels.map(function (p) { return p.id; });
+    if (initial && validIds.indexOf(initial) !== -1) {
+      activate(initial, false);
+    } else {
+      activate(validIds[0], false);
+    }
+  }
+
+  function initSparkles() {
+    var field = document.getElementById('sparkleField');
+    if (!field) return;
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    var count = window.innerWidth < 640 ? 14 : 26;
+    for (var i = 0; i < count; i++) {
+      var s = document.createElement('span');
+      s.className = 'sparkle';
+      s.style.left = Math.random() * 100 + '%';
+      s.style.top = Math.random() * 100 + '%';
+      var size = (Math.random() * 5 + 3).toFixed(1);
+      s.style.width = size + 'px';
+      s.style.height = size + 'px';
+      s.style.animationDelay = (Math.random() * 4.5).toFixed(2) + 's';
+      s.style.animationDuration = (3.5 + Math.random() * 3).toFixed(2) + 's';
+      field.appendChild(s);
+    }
+  }
+
+  document.addEventListener('DOMContentLoaded', function () {
+    initTheme();
+    initTabs();
+    initSparkles();
+    var toggle = document.getElementById('themeToggle');
+    if (toggle) toggle.addEventListener('click', toggleTheme);
+
+    var yearEl = document.getElementById('year');
+    if (yearEl) yearEl.textContent = new Date().getFullYear();
+  });
+})();
