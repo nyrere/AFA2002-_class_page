@@ -35,8 +35,7 @@
     <button class="tab-btn" role="tab" data-tab="teaching">Teaching Statement</button>
     <button class="tab-btn" role="tab" data-tab="ai-policy">AI Policy</button>
     <button class="tab-btn" role="tab" data-tab="syllabus">AFA 2004</button>
-    <button class="tab-btn" role="tab" data-tab="signature">Signature Assignment</button>
-    <button class="tab-btn" role="tab" data-tab="example">Example Presentation</button>
+    <button class="tab-btn" role="tab" data-tab="signature">Example Resources</button>
   </nav>
 </header>
 
@@ -66,13 +65,13 @@
           <span class="pill">Signature Assignment</span>
           <h3 style="font-family:var(--font-display);">Being Seen — The Presentation</h3>
           <p style="color:var(--text-muted); font-size:0.92rem;">The course goal, assignment tasks, grading criteria, and AI policy behind the capstone final presentation.</p>
-          <a href="#signature" data-goto="signature">View assignment →</a>
+          <a href="#signature" data-goto="signature" data-subgoto="assignment">View assignment →</a>
         </div>
         <div class="card">
           <span class="pill magenta">Worked Example</span>
           <h3 style="font-family:var(--font-display);">The Jezebel Trope in <em>Sinners</em></h3>
           <p style="color:var(--text-muted); font-size:0.92rem;">A model case study analyzing Pearline's character arc, built to show students what a strong submission looks like.</p>
-          <a href="#example" data-goto="example">Read the case study →</a>
+          <a href="#signature" data-goto="signature" data-subgoto="example">Read the case study →</a>
         </div>
         <div class="card">
           <span class="pill">Philosophy</span>
@@ -338,8 +337,16 @@
   </section>
 </section>
 
-<!-- ============================= SIGNATURE ASSIGNMENT ============================= -->
+<!-- ============================= EXAMPLE RESOURCES ============================= -->
 <section id="signature" class="panel" role="tabpanel">
+  <div class="subtabs-wrap">
+    <nav class="subtabs" role="tablist" aria-label="Example Resources sections">
+      <button class="subtab-btn" role="tab" data-subtab="assignment" aria-selected="true">Signature Assignment</button>
+      <button class="subtab-btn" role="tab" data-subtab="example">Example Presentation</button>
+    </nav>
+  </div>
+
+  <div class="subpanel active" data-subpanel="assignment">
   <section>
     <div class="container">
       <div class="section-head">
@@ -479,10 +486,9 @@
       </div>
     </div>
   </section>
-</section>
+  </div>
 
-<!-- ============================= EXAMPLE PRESENTATION ============================= -->
-<section id="example" class="panel" role="tabpanel">
+  <div class="subpanel" data-subpanel="example">
   <section>
     <div class="container">
       <div class="section-head">
@@ -584,6 +590,7 @@
       </div>
     </div>
   </section>
+  </div>
 </section>
 
 </main>

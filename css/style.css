@@ -331,6 +331,54 @@ main {
   to { opacity: 1; transform: translateY(0); }
 }
 
+.subpanel {
+  display: none;
+  animation: fadeUp 0.4s ease both;
+}
+.subpanel.active {
+  display: block;
+}
+
+.subtabs-wrap {
+  border-bottom: 1px solid var(--border);
+  background: var(--bg-alt);
+}
+
+.subtabs {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 20px 24px;
+}
+
+.subtab-btn {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  color: var(--text-muted);
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 0.85rem;
+  padding: 9px 18px;
+  border-radius: 999px;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.2s ease;
+}
+
+.subtab-btn:hover {
+  color: var(--text);
+}
+
+.subtab-btn[aria-selected='true'] {
+  background: linear-gradient(100deg, var(--gold-bright), var(--magenta));
+  border-color: transparent;
+  color: #1c1610;
+  box-shadow: var(--shadow-soft);
+}
+
 @media (prefers-reduced-motion: reduce) {
   * { animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
 }

@@ -71,7 +71,13 @@
     document.querySelectorAll('[data-goto]').forEach(function (el) {
       el.addEventListener('click', function (e) {
         e.preventDefault();
-        activate(el.getAttribute('data-goto'), true);
+        var targetId = el.getAttribute('data-goto');
+        activate(targetId, true);
+        var subgoto = el.getAttribute('data-subgoto');
+        if (subgoto) {
+          var panel = document.getElementById(targetId);
+          if (panel && panel._activateSubtab) panel._activateSubtab(subgoto);
+        }
         window.scrollTo({ top: 0, behavior: 'smooth' });
       });
     });
@@ -83,6 +89,45 @@
     } else {
       activate(validIds[0], false);
     }
+  }
+
+  function initSubtabs() {
+    document.querySelectorAll('.subtabs').forEach(function (nav) {
+      var buttons = Array.prototype.slice.call(nav.querySelectorAll('.subtab-btn'));
+      var panelRoot = nav.closest('.panel');
+      if (!panelRoot || !buttons.length) return;
+      var subpanels = Array.prototype.slice.call(panelRoot.querySelectorAll('.subpanel'));
+
+      function activate(key) {
+        buttons.forEach(function (btn) {
+          var isMatch = btn.getAttribute('data-subtab') === key;
+          btn.setAttribute('aria-selected', isMatch ? 'true' : 'false');
+          btn.tabIndex = isMatch ? 0 : -1;
+        });
+        subpanels.forEach(function (sp) {
+          sp.classList.toggle('active', sp.getAttribute('data-subpanel') === key);
+        });
+      }
+
+      buttons.forEach(function (btn, index) {
+        btn.addEventListener('click', function () {
+          activate(btn.getAttribute('data-subtab'));
+        });
+        btn.addEventListener('keydown', function (e) {
+          var newIndex = null;
+          if (e.key === 'ArrowRight') newIndex = (index + 1) % buttons.length;
+          if (e.key === 'ArrowLeft') newIndex = (index - 1 + buttons.length) % buttons.length;
+          if (newIndex !== null) {
+            e.preventDefault();
+            buttons[newIndex].focus();
+            activate(buttons[newIndex].getAttribute('data-subtab'));
+          }
+        });
+      });
+
+      panelRoot._activateSubtab = activate;
+      activate(buttons[0].getAttribute('data-subtab'));
+    });
   }
 
   function initSparkles() {
@@ -150,6 +195,7 @@
   document.addEventListener('DOMContentLoaded', function () {
     initTheme();
     initTabs();
+    initSubtabs();
     initSparkles();
     initClouds();
     initLeaves();
