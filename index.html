@@ -17,23 +17,6 @@
 
 <header class="site-header">
   <div class="header-inner">
-    <a href="#home" class="brand" data-goto="home">
-      <svg class="brand-mark" viewBox="0 0 48 48" aria-hidden="true">
-        <defs>
-          <linearGradient id="markGrad" x1="0" y1="0" x2="1" y2="1">
-            <stop offset="0%" stop-color="var(--gold-bright)"/>
-            <stop offset="100%" stop-color="var(--magenta)"/>
-          </linearGradient>
-        </defs>
-        <path d="M24 2 L29 19 L46 24 L29 29 L24 46 L19 29 L2 24 L19 19 Z" fill="url(#markGrad)"/>
-        <circle cx="38" cy="8" r="3" fill="url(#markGrad)"/>
-        <circle cx="8" cy="38" r="2.2" fill="url(#markGrad)"/>
-      </svg>
-      <span class="brand-text">
-        <span class="brand-title">Viewing the Black Woman</span>
-        <span class="brand-sub">AFA 2004 · Course Portfolio · Nyree Brown</span>
-      </span>
-    </a>
     <div class="header-controls">
       <button id="themeToggle" class="theme-toggle" type="button" aria-pressed="false" aria-label="Toggle light and dark mode">
         <svg class="icon-bulb-on" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
@@ -49,8 +32,9 @@
   </div>
   <nav class="tabs" role="tablist" aria-label="Portfolio sections">
     <button class="tab-btn" role="tab" data-tab="home" aria-selected="true">Home</button>
-    <button class="tab-btn" role="tab" data-tab="syllabus">Syllabus &amp; Resources</button>
     <button class="tab-btn" role="tab" data-tab="teaching">Teaching Statement</button>
+    <button class="tab-btn" role="tab" data-tab="syllabus">AFA 2004</button>
+    <button class="tab-btn" role="tab" data-tab="ai-policy">AI Policy</button>
     <button class="tab-btn" role="tab" data-tab="signature">Signature Assignment</button>
     <button class="tab-btn" role="tab" data-tab="example">Example Presentation</button>
   </nav>
@@ -62,14 +46,99 @@
 <section id="home" class="panel" role="tabpanel">
   <div class="hero">
     <div class="hero-inner">
+      <span class="eyebrow">✨ Instructor Portfolio</span>
+      <h1><em>Nyree Brown</em></h1>
+      <p class="hero-subtitle">Portfolio</p>
+      <p class="hero-lede">
+        Nyree Brown designs Africana Studies and Humanities courses that put media representation under a critical lens — courses like AFA 2004: Viewing the Black Woman, which examines how Black women are portrayed across literature, film, music, and art. Her teaching centers inclusive discussion, evidence-based analysis, and a thoughtful, hands-on approach to classroom AI. Read her full <a href="#teaching" data-goto="teaching">teaching statement</a>.
+      </p>
+    </div>
+  </div>
+
+  <section class="alt">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Portfolio Guide</span>
+        <h2>What's Inside</h2>
+      </div>
+      <div class="grid-3">
+        <div class="card">
+          <span class="pill">Signature Assignment</span>
+          <h3 style="font-family:var(--font-display);">Being Seen — The Presentation</h3>
+          <p style="color:var(--text-muted); font-size:0.92rem;">The course goal, assignment tasks, grading criteria, and AI policy behind the capstone final presentation.</p>
+          <a href="#signature" data-goto="signature">View assignment →</a>
+        </div>
+        <div class="card">
+          <span class="pill magenta">Worked Example</span>
+          <h3 style="font-family:var(--font-display);">The Jezebel Trope in <em>Sinners</em></h3>
+          <p style="color:var(--text-muted); font-size:0.92rem;">A model case study analyzing Pearline's character arc, built to show students what a strong submission looks like.</p>
+          <a href="#example" data-goto="example">Read the case study →</a>
+        </div>
+        <div class="card">
+          <span class="pill">Philosophy</span>
+          <h3 style="font-family:var(--font-display);">Teaching Statement</h3>
+          <p style="color:var(--text-muted); font-size:0.92rem;">On student learning, respectful discussion, evolving AI use, and Black digital humanities in course design.</p>
+          <a href="#teaching" data-goto="teaching">Read the statement →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</section>
+
+<!-- ============================= TEACHING STATEMENT ============================= -->
+<section id="teaching" class="panel" role="tabpanel">
+  <section>
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Teaching Philosophy</span>
+        <h2>Teaching Statement</h2>
+      </div>
+
+      <div class="statement-body card">
+        <p class="statement-lede">I believe education should push students to engage with material outside their own norms, helping them become more understanding and conscious members of society. Everything I plan to do in the classroom — from how I design assignments to how I approach new technology like AI — is built around that goal.</p>
+
+        <h2>Students' Learning</h2>
+        <p>Students come to learning with different motivations. Some are goal-oriented, working toward a finished product or outcome. Others are learning-oriented, motivated simply by the desire to know more. I design my courses so that both kinds of learners find something to hold onto — but I lean especially into goal orientation, because students engage deeply when they care about the subject or have a clear objective they're working toward. My role is to help students see the connection between the material in front of them and a larger goal beyond the classroom.</p>
+        <p>Providing students with diverse points of view and multiple ways of considering a problem is paramount to the humanities as a discipline. In my "Viewing the Black Woman" course, several weeks are structured around sustained discussion as part of the course progression. I emphasize openness to opposing thought — I'm cognizant that this subject matter is polarizing by its very nature, so I intentionally make space for active discussion, not only between myself and the class as a whole, but student-to-student, so that everyone can bring their own worldview into contact with the material. Over the course of a semester, I work to build an environment where students become comfortable sharing their own views and, just as importantly, open to sitting with views that differ from their own.</p>
+
+        <h2>A Safe, Respectful Space for Discussion</h2>
+        <p>I value inclusivity and respect equally in my teaching environment. I learned from my years as a university advisor that setting a precedent early in a student interaction shapes the tone of everything that follows. I carry that lesson into the classroom: I make it clear to students that they are never obligated to disclose personal information to me or others, and that they have every right to think through their own ideas privately. If a student chooses to ask me for personal advice, I give it — but only then. Three things are central to maintaining respect in this type of exchange: acknowledging consent, not offering unsolicited opinions, and giving people the time they need to arrive at their own conclusions.</p>
+
+        <h2>My Evolving Approach to AI</h2>
+        <p>My stance on classroom Artificial Intelligence use has changed substantially, and that evolution is worth naming. I previously held a strict no-use policy, largely because I hadn't taken the time to understand what these tools do. That changed during my graduate course, ENG 6813 (Interdisciplinary Teaching), where I was confronted with the reality of AI's capabilities rather than relying on assumptions born from a lack of knowledge in the space. My ideology going forward is grounded in experimentation, informed by work like Ethan Mollick's <em>One Useful Thing</em>, which speaks to the practical, everyday uses of AI in the classroom.</p>
+        <p>My AI policy reflects that shift: students can use AI to generate examples, summarize notes, and create study aids, but it never serves as the sole source for a research assignment. Students remain responsible for everything they submit under their own name. I want students to internalize that AI can be a useful tool, but they are the researchers — and eventually the experts — of their own work. That sense of accountability is something I hope follows them well beyond my classroom.</p>
+
+        <h2>Digital Humanities in My Course Design</h2>
+        <p>One area of Digital Humanities methodology I lean into heavily is examining how digital platforms interact with humanist inquiry, particularly through the lens of Black digital humanities. This connection is central to my teaching philosophy and shapes how I design assignments from the very start of the course.</p>
+        <p>Early in my course design for AFA 2002 (Viewing the Black Woman), students complete an assignment built specifically around AI, because I want to make clear from the outset that a system of racism — both mediated and unmediated — has long structured the exclusion of the Black diaspora, and that this history persists in the tools we now use. Students evaluate common tropes of Black women in television by interacting directly with an AI platform, then comparing its output to their own independent interpretation of the same material, allowing them to witness, in real time, the bias and misinformation that can exist in AI databases. This assignment facilitates learning of Black digital humanities ideologies: helping students use technology effectively while remaining sharply aware of its shortcomings, and recognizing exactly where their own original thought is not just useful, but necessary.</p>
+
+        <h2>Assessment as Feedback</h2>
+        <p>As a student, I value receiving quality and specific feedback on my work, and I carry that motivation directly into my teaching. I aim to give students concrete points they can act on to improve, and I acknowledge their growth when they do. Feedback, to me, is not a judgment on a finished product — it's part of an ongoing conversation about how a student is developing.</p>
+      </div>
+
+      <div class="download-card" style="margin-top:28px;">
+        <div class="file-info">
+          <div class="file-icon">DOCX</div>
+          <div>
+            <div class="fname">Teaching Statement.docx</div>
+            <div class="fmeta">Original document, Summer 2026</div>
+          </div>
+        </div>
+        <a class="btn btn-ghost" href="assets/files/Teaching-Statement.docx" download>Download</a>
+      </div>
+    </div>
+  </section>
+</section>
+
+<!-- ============================= AFA 2004 (COURSE + SYLLABUS) ============================= -->
+<section id="syllabus" class="panel" role="tabpanel">
+  <div class="hero">
+    <div class="hero-inner">
       <span class="eyebrow">✨ Africana Studies &amp; Humanities · Media &amp; Representation</span>
-      <h1>Viewing the <em>Black Woman</em></h1>
+      <h1>AFA 2004: Viewing the <em>Black Woman</em></h1>
       <p class="hero-lede">
         An Africana studies course exploring how Black women — especially African American women — are portrayed across music, poetry, literature, film, social media, and visual art. This portfolio showcases the course's signature assignment, teaching philosophy, and design.
       </p>
-      <div class="hero-actions">
-        <a href="#syllabus" class="btn btn-primary" data-goto="syllabus">View the Syllabus</a>
-      </div>
       <div class="stat-row">
         <div class="stat-card"><div class="stat-num">AFA 2004</div><div class="stat-label">Course Number</div></div>
         <div class="stat-card"><div class="stat-num">3</div><div class="stat-label">Credit Hours</div></div>
@@ -102,23 +171,6 @@
           That question anchors every unit of the course — the throughline for every case study, discussion, and assignment from the first week to the final presentation.
         </p>
       </div>
-
-      <div class="grid-2">
-        <div class="card">
-          <div class="icon-badge">NB</div>
-          <h3 style="font-family: var(--font-display); margin-top:0;">Instructor</h3>
-          <p style="color:var(--text-muted); margin-bottom:0;">
-            Nyree Brown teaches this course with a philosophy grounded in inclusive discussion, thoughtful AI integration, and Black digital humanities methodology. Read the full <a href="#teaching" data-goto="teaching">teaching statement</a>.
-          </p>
-        </div>
-        <div class="card">
-          <div class="icon-badge">✎</div>
-          <h3 style="font-family: var(--font-display); margin-top:0;">Course Materials</h3>
-          <p style="color:var(--text-muted); margin-bottom:0;">
-            Students read Zora Neale Hurston's <em>Their Eyes Were Watching God</em>, engage a free AI chatbot as a research assistant, and analyze poems, TikToks, visual art, music videos, and film across the semester.
-          </p>
-        </div>
-      </div>
     </div>
   </section>
 
@@ -142,27 +194,156 @@
   <section class="alt">
     <div class="container">
       <div class="section-head">
-        <span class="eyebrow">Portfolio Guide</span>
-        <h2>What's Inside</h2>
+        <span class="eyebrow">Fall 2026 Semester</span>
+        <h2>Course Details &amp; Materials</h2>
       </div>
-      <div class="grid-3">
+      <div class="grid-2">
         <div class="card">
-          <span class="pill">Signature Assignment</span>
-          <h3 style="font-family:var(--font-display);">Being Seen — The Presentation</h3>
-          <p style="color:var(--text-muted); font-size:0.92rem;">The course goal, assignment tasks, grading criteria, and AI policy behind the capstone final presentation.</p>
-          <a href="#signature" data-goto="signature">View assignment →</a>
+          <h3 style="font-family:var(--font-display); margin-top:0;">Course Details</h3>
+          <p style="color:var(--text-muted); margin-bottom:6px;"><strong>Instructor:</strong> Nyree Brown</p>
+          <p style="color:var(--text-muted); margin-bottom:6px;"><strong>Meeting Pattern:</strong> In person, 75 minutes, every Thursday</p>
+          <p style="color:var(--text-muted); margin-bottom:6px;"><strong>Office Hours:</strong> By appointment — email to schedule</p>
+          <p style="color:var(--text-muted); margin-bottom:0;"><strong>Response Time:</strong> 24–48 hours on weekdays</p>
         </div>
         <div class="card">
-          <span class="pill magenta">Worked Example</span>
-          <h3 style="font-family:var(--font-display);">The Jezebel Trope in <em>Sinners</em></h3>
-          <p style="color:var(--text-muted); font-size:0.92rem;">A model case study analyzing Pearline's character arc, built to show students what a strong submission looks like.</p>
-          <a href="#example" data-goto="example">Read the case study →</a>
+          <h3 style="font-family:var(--font-display); margin-top:0;">Required Materials</h3>
+          <p style="color:var(--text-muted); margin-bottom:6px;">Zora Neale Hurston, <em>Their Eyes Were Watching God</em> (1937) — the one required purchase</p>
+          <p style="color:var(--text-muted); margin-bottom:0;">Access to a free AI chatbot (Claude, Microsoft Copilot, or ChatGPT) — a free tier is all that's needed</p>
         </div>
-        <div class="card">
-          <span class="pill">Philosophy</span>
-          <h3 style="font-family:var(--font-display);">Teaching Statement</h3>
-          <p style="color:var(--text-muted); font-size:0.92rem;">On student learning, respectful discussion, evolving AI use, and Black digital humanities in course design.</p>
-          <a href="#teaching" data-goto="teaching">Read the statement →</a>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Media Analysis Key Terms</span>
+        <h2>Course Vocabulary</h2>
+        <p>The shared analytical vocabulary students build in Unit 2 — Agency, Erasure, Framing, Gaze, Stereotype, Subtext, Symbolism, Tokenism, and Trope — used throughout the semester.</p>
+      </div>
+      <div class="download-card">
+        <div class="file-info">
+          <div class="file-icon">DOCX</div>
+          <div>
+            <div class="fname">Media Analysis Key Terms Worksheet.docx</div>
+            <div class="fmeta">Unit 1 vocabulary worksheet — define each term and provide an example</div>
+          </div>
+        </div>
+        <a class="btn btn-primary" href="assets/files/Media-Analysis-Key-Terms-Worksheet.docx" download>Download worksheet</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="alt">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Grading</span>
+        <h2>Assignment Breakdown</h2>
+        <p>450 points possible across the semester. Weight shows each assignment's share of the total grade.</p>
+      </div>
+      <div class="table-scroll">
+        <table class="criteria-table">
+          <thead><tr><th>Assignment</th><th class="pts">Points</th><th class="pts">Weight</th></tr></thead>
+          <tbody>
+            <tr><td>Attendance (5 pts / class, 13 sessions)</td><td class="pts">60</td><td class="pts">13.3%</td></tr>
+            <tr><td>Unit 1 — Subject Introduction Discussion</td><td class="pts">20</td><td class="pts">4.4%</td></tr>
+            <tr><td>Unit 2 — Media Analysis Vocabulary Worksheet</td><td class="pts">20</td><td class="pts">4.4%</td></tr>
+            <tr><td>Unit 2 — Tropes in TV Discussion</td><td class="pts">20</td><td class="pts">4.4%</td></tr>
+            <tr><td>Unit 3 — Poems Case Study</td><td class="pts">30</td><td class="pts">6.7%</td></tr>
+            <tr><td>Unit 4 — TikTok / Meme Case Study</td><td class="pts">30</td><td class="pts">6.7%</td></tr>
+            <tr><td>Unit 5 — Socratic Circle + Reflection</td><td class="pts">20</td><td class="pts">4.4%</td></tr>
+            <tr><td>Mid-Semester Quiz</td><td class="pts">40</td><td class="pts">8.9%</td></tr>
+            <tr><td>Unit 6 — Looking Between (Visual Art)</td><td class="pts">20</td><td class="pts">4.4%</td></tr>
+            <tr><td>Unit 7 — Music Video / Lyrics Case Study</td><td class="pts">30</td><td class="pts">6.7%</td></tr>
+            <tr><td>Unit 8 — Sinners Mini Assignment</td><td class="pts">20</td><td class="pts">4.4%</td></tr>
+            <tr><td>Being Seen: The Presentation</td><td class="pts">100</td><td class="pts">22.2%</td></tr>
+            <tr><td>Changing Perspectives Mini-Project</td><td class="pts">40</td><td class="pts">8.9%</td></tr>
+            <tr class="total"><td>Total Points Possible</td><td class="pts">450</td><td class="pts">100%</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="ornament">✦ ✦ ✦</div>
+
+      <div class="section-head">
+        <span class="eyebrow">Final Grades</span>
+        <h2>Letter Grade Scale</h2>
+        <p>Your total points earned, out of 450 possible, determines your final letter grade.</p>
+      </div>
+      <div class="table-scroll">
+        <table class="criteria-table">
+          <thead><tr><th>Letter Grade</th><th class="pts">Points (out of 450)</th><th class="pts">Percentage Range</th></tr></thead>
+          <tbody>
+            <tr><td>A</td><td class="pts">405–450</td><td class="pts">90–100%</td></tr>
+            <tr><td>B+</td><td class="pts">396–404</td><td class="pts">88–89%</td></tr>
+            <tr><td>B</td><td class="pts">378–395</td><td class="pts">84–87%</td></tr>
+            <tr><td>B-</td><td class="pts">360–377</td><td class="pts">80–83%</td></tr>
+            <tr><td>C+</td><td class="pts">342–359</td><td class="pts">76–79%</td></tr>
+            <tr><td>C</td><td class="pts">324–341</td><td class="pts">72–75%</td></tr>
+            <tr><td>C-</td><td class="pts">315–323</td><td class="pts">70–71%</td></tr>
+            <tr><td>D</td><td class="pts">270–314</td><td class="pts">60–69%</td></tr>
+            <tr><td>F</td><td class="pts">Below 270</td><td class="pts">Below 60%</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="download-card" style="margin-top:32px;">
+        <div class="file-info">
+          <div class="file-icon">DOCX</div>
+          <div>
+            <div class="fname">Full Syllabus.docx</div>
+            <div class="fmeta">Complete Fall 2026 course schedule</div>
+          </div>
+        </div>
+        <a class="btn btn-ghost" href="assets/files/Viewing-the-Black-Women-Syllabus.docx" download>Download</a>
+      </div>
+    </div>
+  </section>
+</section>
+
+<!-- ============================= AI POLICY ============================= -->
+<section id="ai-policy" class="panel" role="tabpanel">
+  <section>
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Course-Wide AI Policy</span>
+        <h2>Using AI Responsibly</h2>
+        <p>How AI chatbots may — and may not — be used across AFA 2004: Viewing the Black Woman.</p>
+      </div>
+      <div class="card">
+        <p style="color:var(--text-muted);">Pretending AI tools don't exist doesn't prepare you to think critically about when they should or shouldn't be used. In this course, you're allowed to use AI chatbots — specifically Anthropic's Claude, Microsoft Copilot, and ChatGPT. No single tool is required for any assignment. If you use AI on an assignment, you need to disclose it, including a brief note on how you used it. Some assignments narrow or expand this general policy in their own instructions — always check the specific assignment sheet.</p>
+        <p style="color:var(--text-muted);">Think of AI as a research assistant, not a ghostwriter. A good research assistant can dig up sources, summarize background, or point you toward context you might've missed — but they don't write your paper for you, and they don't get to decide what you conclude. If AI ends up doing the thinking instead of you, that work isn't really yours anymore.</p>
+        <p style="color:var(--text-muted); margin-bottom:0;">AI tools pull from real people's work, so we honor that labor by citing sources properly using APA (7th edition) format. You're responsible for any false or misrepresented information in your work, even if AI produced it.</p>
+      </div>
+
+      <div class="ornament">✦ ✦ ✦</div>
+
+      <blockquote class="pull-quote">
+        "I used Claude (Anthropic) to brainstorm possible angles for analyzing my chosen piece. I asked, 'What are some different ways to interpret the symbolism of (a color) in (piece name)?' The tool suggested several options, including (mention of 1–2 ideas it offered). I selected and developed further the interpretation of (explain which idea you built upon)."
+        <cite>— AI Disclosure Example</cite>
+      </blockquote>
+
+      <div class="ai-cols" style="margin-top:32px;">
+        <div class="ai-col yes">
+          <h3>✓ When You Can Use AI</h3>
+          <ul>
+            <li>When an assignment specifically allows it</li>
+            <li>To brainstorm ideas</li>
+            <li>To check grammar or syntax</li>
+            <li>As a study aid</li>
+            <li>To get an extra example of a concept you've already discussed in class</li>
+            <li>To summarize your own notes</li>
+          </ul>
+        </div>
+        <div class="ai-col no">
+          <h3>✕ When You Can't Use AI</h3>
+          <ul>
+            <li>When an assignment specifically says not to</li>
+            <li>On a quiz or test</li>
+            <li>To write a reflection on your behalf</li>
+            <li>As your only source in a research-intensive assignment — always cite primary and secondary sources using APA (7th edition) format</li>
+            <li>If you're completely lost on a concept — come talk to me instead</li>
+          </ul>
         </div>
       </div>
     </div>
@@ -412,210 +593,6 @@
           </div>
         </div>
         <a class="btn btn-primary" href="assets/files/Being-Seen-Example-Presentation.pptx" download>Download deck</a>
-      </div>
-    </div>
-  </section>
-</section>
-
-<!-- ============================= TEACHING STATEMENT ============================= -->
-<section id="teaching" class="panel" role="tabpanel">
-  <section>
-    <div class="container">
-      <div class="section-head">
-        <span class="eyebrow">Teaching Philosophy</span>
-        <h2>Teaching Statement</h2>
-      </div>
-
-      <div class="statement-body card">
-        <p class="statement-lede">I believe education should push students to engage with material outside their own norms, helping them become more understanding and conscious members of society. Everything I plan to do in the classroom — from how I design assignments to how I approach new technology like AI — is built around that goal.</p>
-
-        <h2>Students' Learning</h2>
-        <p>Students come to learning with different motivations. Some are goal-oriented, working toward a finished product or outcome. Others are learning-oriented, motivated simply by the desire to know more. I design my courses so that both kinds of learners find something to hold onto — but I lean especially into goal orientation, because students engage deeply when they care about the subject or have a clear objective they're working toward. My role is to help students see the connection between the material in front of them and a larger goal beyond the classroom.</p>
-        <p>Providing students with diverse points of view and multiple ways of considering a problem is paramount to the humanities as a discipline. In my "Viewing the Black Woman" course, several weeks are structured around sustained discussion as part of the course progression. I emphasize openness to opposing thought — I'm cognizant that this subject matter is polarizing by its very nature, so I intentionally make space for active discussion, not only between myself and the class as a whole, but student-to-student, so that everyone can bring their own worldview into contact with the material. Over the course of a semester, I work to build an environment where students become comfortable sharing their own views and, just as importantly, open to sitting with views that differ from their own.</p>
-
-        <h2>A Safe, Respectful Space for Discussion</h2>
-        <p>I value inclusivity and respect equally in my teaching environment. I learned from my years as a university advisor that setting a precedent early in a student interaction shapes the tone of everything that follows. I carry that lesson into the classroom: I make it clear to students that they are never obligated to disclose personal information to me or others, and that they have every right to think through their own ideas privately. If a student chooses to ask me for personal advice, I give it — but only then. Three things are central to maintaining respect in this type of exchange: acknowledging consent, not offering unsolicited opinions, and giving people the time they need to arrive at their own conclusions.</p>
-
-        <h2>My Evolving Approach to AI</h2>
-        <p>My stance on classroom Artificial Intelligence use has changed substantially, and that evolution is worth naming. I previously held a strict no-use policy, largely because I hadn't taken the time to understand what these tools do. That changed during my graduate course, ENG 6813 (Interdisciplinary Teaching), where I was confronted with the reality of AI's capabilities rather than relying on assumptions born from a lack of knowledge in the space. My ideology going forward is grounded in experimentation, informed by work like Ethan Mollick's <em>One Useful Thing</em>, which speaks to the practical, everyday uses of AI in the classroom.</p>
-        <p>My AI policy reflects that shift: students can use AI to generate examples, summarize notes, and create study aids, but it never serves as the sole source for a research assignment. Students remain responsible for everything they submit under their own name. I want students to internalize that AI can be a useful tool, but they are the researchers — and eventually the experts — of their own work. That sense of accountability is something I hope follows them well beyond my classroom.</p>
-
-        <h2>Digital Humanities in My Course Design</h2>
-        <p>One area of Digital Humanities methodology I lean into heavily is examining how digital platforms interact with humanist inquiry, particularly through the lens of Black digital humanities. This connection is central to my teaching philosophy and shapes how I design assignments from the very start of the course.</p>
-        <p>Early in my course design for AFA 2002 (Viewing the Black Woman), students complete an assignment built specifically around AI, because I want to make clear from the outset that a system of racism — both mediated and unmediated — has long structured the exclusion of the Black diaspora, and that this history persists in the tools we now use. Students evaluate common tropes of Black women in television by interacting directly with an AI platform, then comparing its output to their own independent interpretation of the same material, allowing them to witness, in real time, the bias and misinformation that can exist in AI databases. This assignment facilitates learning of Black digital humanities ideologies: helping students use technology effectively while remaining sharply aware of its shortcomings, and recognizing exactly where their own original thought is not just useful, but necessary.</p>
-
-        <h2>Assessment as Feedback</h2>
-        <p>As a student, I value receiving quality and specific feedback on my work, and I carry that motivation directly into my teaching. I aim to give students concrete points they can act on to improve, and I acknowledge their growth when they do. Feedback, to me, is not a judgment on a finished product — it's part of an ongoing conversation about how a student is developing.</p>
-      </div>
-
-      <div class="download-card" style="margin-top:28px;">
-        <div class="file-info">
-          <div class="file-icon">DOCX</div>
-          <div>
-            <div class="fname">Teaching Statement.docx</div>
-            <div class="fmeta">Original document, Summer 2026</div>
-          </div>
-        </div>
-        <a class="btn btn-ghost" href="assets/files/Teaching-Statement.docx" download>Download</a>
-      </div>
-    </div>
-  </section>
-</section>
-
-<!-- ============================= SYLLABUS & RESOURCES ============================= -->
-<section id="syllabus" class="panel" role="tabpanel">
-  <section>
-    <div class="container">
-      <div class="section-head">
-        <span class="eyebrow">Fall 2026 Semester</span>
-        <h2>Syllabus &amp; Course Resources</h2>
-        <p>Viewing the Black Woman · AFA 2004 · 3 Credit Hours · Mixed Mode</p>
-      </div>
-
-      <div class="grid-2">
-        <div class="card">
-          <h3 style="font-family:var(--font-display); margin-top:0;">Course Details</h3>
-          <p style="color:var(--text-muted); margin-bottom:6px;"><strong>Instructor:</strong> Nyree Brown</p>
-          <p style="color:var(--text-muted); margin-bottom:6px;"><strong>Meeting Pattern:</strong> In person, 75 minutes, every Thursday</p>
-          <p style="color:var(--text-muted); margin-bottom:6px;"><strong>Office Hours:</strong> By appointment — email to schedule</p>
-          <p style="color:var(--text-muted); margin-bottom:0;"><strong>Response Time:</strong> 24–48 hours on weekdays</p>
-        </div>
-        <div class="card">
-          <h3 style="font-family:var(--font-display); margin-top:0;">Required Materials</h3>
-          <p style="color:var(--text-muted); margin-bottom:6px;">Zora Neale Hurston, <em>Their Eyes Were Watching God</em> (1937) — the one required purchase</p>
-          <p style="color:var(--text-muted); margin-bottom:0;">Access to a free AI chatbot (Claude, Microsoft Copilot, or ChatGPT) — a free tier is all that's needed</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="alt">
-    <div class="container">
-      <div class="section-head">
-        <span class="eyebrow">Course-Wide AI Policy</span>
-        <h2>Using AI Responsibly</h2>
-      </div>
-      <div class="card">
-        <p style="color:var(--text-muted);">Pretending AI tools don't exist doesn't prepare you to think critically about when they should or shouldn't be used. In this course, you're allowed to use AI chatbots — specifically Anthropic's Claude, Microsoft Copilot, and ChatGPT. No single tool is required for any assignment. If you use AI on an assignment, you need to disclose it, including a brief note on how you used it. Some assignments narrow or expand this general policy in their own instructions — always check the specific assignment sheet.</p>
-        <p style="color:var(--text-muted);">Think of AI as a research assistant, not a ghostwriter. A good research assistant can dig up sources, summarize background, or point you toward context you might've missed — but they don't write your paper for you, and they don't get to decide what you conclude. If AI ends up doing the thinking instead of you, that work isn't really yours anymore.</p>
-        <p style="color:var(--text-muted); margin-bottom:0;">AI tools pull from real people's work, so we honor that labor by citing sources properly using APA (7th edition) format. You're responsible for any false or misrepresented information in your work, even if AI produced it.</p>
-      </div>
-
-      <div class="ornament">✦ ✦ ✦</div>
-
-      <blockquote class="pull-quote">
-        "I used Claude (Anthropic) to brainstorm possible angles for analyzing my chosen piece. I asked, 'What are some different ways to interpret the symbolism of (a color) in (piece name)?' The tool suggested several options, including (mention of 1–2 ideas it offered). I selected and developed further the interpretation of (explain which idea you built upon)."
-        <cite>— AI Disclosure Example</cite>
-      </blockquote>
-
-      <div class="ai-cols" style="margin-top:32px;">
-        <div class="ai-col yes">
-          <h3>✓ When You Can Use AI</h3>
-          <ul>
-            <li>When an assignment specifically allows it</li>
-            <li>To brainstorm ideas</li>
-            <li>To check grammar or syntax</li>
-            <li>As a study aid</li>
-            <li>To get an extra example of a concept you've already discussed in class</li>
-            <li>To summarize your own notes</li>
-          </ul>
-        </div>
-        <div class="ai-col no">
-          <h3>✕ When You Can't Use AI</h3>
-          <ul>
-            <li>When an assignment specifically says not to</li>
-            <li>On a quiz or test</li>
-            <li>To write a reflection on your behalf</li>
-            <li>As your only source in a research-intensive assignment — always cite primary and secondary sources using APA (7th edition) format</li>
-            <li>If you're completely lost on a concept — come talk to me instead</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section>
-    <div class="container">
-      <div class="section-head">
-        <span class="eyebrow">Media Analysis Key Terms</span>
-        <h2>Course Vocabulary</h2>
-        <p>The shared analytical vocabulary students build in Unit 2 — Agency, Erasure, Framing, Gaze, Stereotype, Subtext, Symbolism, Tokenism, and Trope — used throughout the semester.</p>
-      </div>
-      <div class="download-card">
-        <div class="file-info">
-          <div class="file-icon">DOCX</div>
-          <div>
-            <div class="fname">Media Analysis Key Terms Worksheet.docx</div>
-            <div class="fmeta">Unit 1 vocabulary worksheet — define each term and provide an example</div>
-          </div>
-        </div>
-        <a class="btn btn-primary" href="assets/files/Media-Analysis-Key-Terms-Worksheet.docx" download>Download worksheet</a>
-      </div>
-    </div>
-  </section>
-
-  <section class="alt">
-    <div class="container">
-      <div class="section-head">
-        <span class="eyebrow">Grading</span>
-        <h2>Assignment Breakdown</h2>
-        <p>450 points possible across the semester. Weight shows each assignment's share of the total grade.</p>
-      </div>
-      <div class="table-scroll">
-        <table class="criteria-table">
-          <thead><tr><th>Assignment</th><th class="pts">Points</th><th class="pts">Weight</th></tr></thead>
-          <tbody>
-            <tr><td>Attendance (5 pts / class, 13 sessions)</td><td class="pts">60</td><td class="pts">13.3%</td></tr>
-            <tr><td>Unit 1 — Subject Introduction Discussion</td><td class="pts">20</td><td class="pts">4.4%</td></tr>
-            <tr><td>Unit 2 — Media Analysis Vocabulary Worksheet</td><td class="pts">20</td><td class="pts">4.4%</td></tr>
-            <tr><td>Unit 2 — Tropes in TV Discussion</td><td class="pts">20</td><td class="pts">4.4%</td></tr>
-            <tr><td>Unit 3 — Poems Case Study</td><td class="pts">30</td><td class="pts">6.7%</td></tr>
-            <tr><td>Unit 4 — TikTok / Meme Case Study</td><td class="pts">30</td><td class="pts">6.7%</td></tr>
-            <tr><td>Unit 5 — Socratic Circle + Reflection</td><td class="pts">20</td><td class="pts">4.4%</td></tr>
-            <tr><td>Mid-Semester Quiz</td><td class="pts">40</td><td class="pts">8.9%</td></tr>
-            <tr><td>Unit 6 — Looking Between (Visual Art)</td><td class="pts">20</td><td class="pts">4.4%</td></tr>
-            <tr><td>Unit 7 — Music Video / Lyrics Case Study</td><td class="pts">30</td><td class="pts">6.7%</td></tr>
-            <tr><td>Unit 8 — Sinners Mini Assignment</td><td class="pts">20</td><td class="pts">4.4%</td></tr>
-            <tr><td>Being Seen: The Presentation</td><td class="pts">100</td><td class="pts">22.2%</td></tr>
-            <tr><td>Changing Perspectives Mini-Project</td><td class="pts">40</td><td class="pts">8.9%</td></tr>
-            <tr class="total"><td>Total Points Possible</td><td class="pts">450</td><td class="pts">100%</td></tr>
-          </tbody>
-        </table>
-      </div>
-
-      <div class="ornament">✦ ✦ ✦</div>
-
-      <div class="section-head">
-        <span class="eyebrow">Final Grades</span>
-        <h2>Letter Grade Scale</h2>
-        <p>Your total points earned, out of 450 possible, determines your final letter grade.</p>
-      </div>
-      <div class="table-scroll">
-        <table class="criteria-table">
-          <thead><tr><th>Letter Grade</th><th class="pts">Points (out of 450)</th><th class="pts">Percentage Range</th></tr></thead>
-          <tbody>
-            <tr><td>A</td><td class="pts">405–450</td><td class="pts">90–100%</td></tr>
-            <tr><td>B+</td><td class="pts">396–404</td><td class="pts">88–89%</td></tr>
-            <tr><td>B</td><td class="pts">378–395</td><td class="pts">84–87%</td></tr>
-            <tr><td>B-</td><td class="pts">360–377</td><td class="pts">80–83%</td></tr>
-            <tr><td>C+</td><td class="pts">342–359</td><td class="pts">76–79%</td></tr>
-            <tr><td>C</td><td class="pts">324–341</td><td class="pts">72–75%</td></tr>
-            <tr><td>C-</td><td class="pts">315–323</td><td class="pts">70–71%</td></tr>
-            <tr><td>D</td><td class="pts">270–314</td><td class="pts">60–69%</td></tr>
-            <tr><td>F</td><td class="pts">Below 270</td><td class="pts">Below 60%</td></tr>
-          </tbody>
-        </table>
-      </div>
-
-      <div class="download-card" style="margin-top:32px;">
-        <div class="file-info">
-          <div class="file-icon">DOCX</div>
-          <div>
-            <div class="fname">Full Syllabus.docx</div>
-            <div class="fmeta">Complete Fall 2026 course schedule</div>
-          </div>
-        </div>
-        <a class="btn btn-ghost" href="assets/files/Viewing-the-Black-Women-Syllabus.docx" download>Download</a>
       </div>
     </div>
   </section>
