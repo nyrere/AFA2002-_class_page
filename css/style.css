@@ -1,31 +1,31 @@
 /* ==========================================================================
    Viewing the Black Women — Portfolio
-   Theme: Black Girl Magic — rich plum/black, gold, and magenta accents
+   Theme: Earthy & Ethereal — forest green, umber brown, and rust red accents
    ========================================================================== */
 
 :root {
   color-scheme: dark;
 
   /* Dark theme (default) */
-  --bg: #150c1e;
-  --bg-alt: #1e1129;
-  --surface: #241534;
-  --surface-raised: #2b1a3d;
-  --border: rgba(255, 209, 102, 0.16);
-  --text: #f6f1fb;
-  --text-muted: #cbb8de;
-  --text-soft: #a897bd;
+  --bg: #14180f;
+  --bg-alt: #1c2116;
+  --surface: #232a1c;
+  --surface-raised: #2b3322;
+  --border: rgba(201, 156, 87, 0.18);
+  --text: #f1ead9;
+  --text-muted: #c8bd9e;
+  --text-soft: #96896c;
 
-  --gold: #f2c14e;
-  --gold-bright: #ffd97a;
-  --magenta: #e0559b;
-  --magenta-soft: #c752c9;
-  --plum: #5a2e78;
+  --gold: #c08a3e;
+  --gold-bright: #dba658;
+  --magenta: #a8402b;
+  --magenta-soft: #c05f3f;
+  --plum: #2f5233;
 
-  --gradient-hero: radial-gradient(circle at 15% 20%, rgba(224, 85, 155, 0.35), transparent 45%),
-    radial-gradient(circle at 85% 10%, rgba(242, 193, 78, 0.25), transparent 40%),
-    radial-gradient(circle at 50% 100%, rgba(90, 46, 120, 0.55), transparent 60%),
-    linear-gradient(180deg, #1a0f26 0%, #150c1e 100%);
+  --gradient-hero: radial-gradient(circle at 15% 20%, rgba(168, 64, 43, 0.32), transparent 45%),
+    radial-gradient(circle at 85% 10%, rgba(192, 138, 62, 0.24), transparent 40%),
+    radial-gradient(circle at 50% 100%, rgba(47, 82, 51, 0.55), transparent 60%),
+    linear-gradient(180deg, #181f12 0%, #14180f 100%);
 
   --shadow: 0 20px 50px rgba(0, 0, 0, 0.45);
   --shadow-soft: 0 8px 24px rgba(0, 0, 0, 0.3);
@@ -37,52 +37,52 @@
 :root[data-theme='light'] {
   color-scheme: light;
 
-  --bg: #fdf6ee;
-  --bg-alt: #fbeee0;
-  --surface: #ffffff;
-  --surface-raised: #ffffff;
-  --border: rgba(122, 47, 100, 0.14);
-  --text: #2c1435;
-  --text-muted: #5b3a63;
-  --text-soft: #7d5b7f;
+  --bg: #f6f0e2;
+  --bg-alt: #efe6d1;
+  --surface: #fffcf6;
+  --surface-raised: #fffcf6;
+  --border: rgba(92, 61, 33, 0.15);
+  --text: #2b2013;
+  --text-muted: #5b4a34;
+  --text-soft: #7d6a4f;
 
-  --gold: #b8860b;
-  --gold-bright: #d79a1f;
-  --magenta: #c23b83;
-  --magenta-soft: #a83aa0;
-  --plum: #7a2f8f;
+  --gold: #8a5a20;
+  --gold-bright: #a5701f;
+  --magenta: #9c3b26;
+  --magenta-soft: #b1543a;
+  --plum: #2f5233;
 
-  --gradient-hero: radial-gradient(circle at 15% 20%, rgba(194, 59, 131, 0.16), transparent 45%),
-    radial-gradient(circle at 85% 10%, rgba(184, 134, 11, 0.18), transparent 40%),
-    radial-gradient(circle at 50% 100%, rgba(122, 47, 143, 0.12), transparent 60%),
-    linear-gradient(180deg, #fff7ec 0%, #fdf6ee 100%);
+  --gradient-hero: radial-gradient(circle at 15% 20%, rgba(156, 59, 38, 0.14), transparent 45%),
+    radial-gradient(circle at 85% 10%, rgba(138, 90, 32, 0.16), transparent 40%),
+    radial-gradient(circle at 50% 100%, rgba(47, 82, 51, 0.13), transparent 60%),
+    linear-gradient(180deg, #faf4e6 0%, #f6f0e2 100%);
 
-  --shadow: 0 20px 50px rgba(122, 47, 100, 0.12);
-  --shadow-soft: 0 8px 24px rgba(122, 47, 100, 0.08);
+  --shadow: 0 20px 50px rgba(59, 41, 20, 0.12);
+  --shadow-soft: 0 8px 24px rgba(59, 41, 20, 0.08);
 }
 
 @media (prefers-color-scheme: light) {
   :root:not([data-theme]) {
     color-scheme: light;
-    --bg: #fdf6ee;
-    --bg-alt: #fbeee0;
-    --surface: #ffffff;
-    --surface-raised: #ffffff;
-    --border: rgba(122, 47, 100, 0.14);
-    --text: #2c1435;
-    --text-muted: #5b3a63;
-    --text-soft: #7d5b7f;
-    --gold: #b8860b;
-    --gold-bright: #d79a1f;
-    --magenta: #c23b83;
-    --magenta-soft: #a83aa0;
-    --plum: #7a2f8f;
-    --gradient-hero: radial-gradient(circle at 15% 20%, rgba(194, 59, 131, 0.16), transparent 45%),
-      radial-gradient(circle at 85% 10%, rgba(184, 134, 11, 0.18), transparent 40%),
-      radial-gradient(circle at 50% 100%, rgba(122, 47, 143, 0.12), transparent 60%),
-      linear-gradient(180deg, #fff7ec 0%, #fdf6ee 100%);
-    --shadow: 0 20px 50px rgba(122, 47, 100, 0.12);
-    --shadow-soft: 0 8px 24px rgba(122, 47, 100, 0.08);
+    --bg: #f6f0e2;
+    --bg-alt: #efe6d1;
+    --surface: #fffcf6;
+    --surface-raised: #fffcf6;
+    --border: rgba(92, 61, 33, 0.15);
+    --text: #2b2013;
+    --text-muted: #5b4a34;
+    --text-soft: #7d6a4f;
+    --gold: #8a5a20;
+    --gold-bright: #a5701f;
+    --magenta: #9c3b26;
+    --magenta-soft: #b1543a;
+    --plum: #2f5233;
+    --gradient-hero: radial-gradient(circle at 15% 20%, rgba(156, 59, 38, 0.14), transparent 45%),
+      radial-gradient(circle at 85% 10%, rgba(138, 90, 32, 0.16), transparent 40%),
+      radial-gradient(circle at 50% 100%, rgba(47, 82, 51, 0.13), transparent 60%),
+      linear-gradient(180deg, #faf4e6 0%, #f6f0e2 100%);
+    --shadow: 0 20px 50px rgba(59, 41, 20, 0.12);
+    --shadow-soft: 0 8px 24px rgba(59, 41, 20, 0.08);
   }
 }
 
@@ -125,7 +125,7 @@ a {
   left: -999px;
   top: 0;
   background: var(--gold);
-  color: #1a0f26;
+  color: #1c1610;
   padding: 10px 18px;
   border-radius: 0 0 8px 0;
   z-index: 200;
@@ -283,7 +283,7 @@ button:focus-visible {
 
 .tab-btn[aria-selected='true'] {
   background: linear-gradient(100deg, var(--magenta), var(--plum));
-  color: #fff8ef;
+  color: #f8f1e0;
   box-shadow: var(--shadow-soft);
 }
 
@@ -390,8 +390,8 @@ main {
 
 .btn-primary {
   background: linear-gradient(100deg, var(--gold-bright), var(--magenta));
-  color: #1a0f26;
-  box-shadow: 0 10px 28px rgba(224, 85, 155, 0.35);
+  color: #1c1610;
+  box-shadow: 0 10px 28px rgba(168, 64, 43, 0.35);
 }
 
 .btn-ghost {
@@ -495,7 +495,7 @@ section.alt {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #fff8ef;
+  color: #f8f1e0;
   font-weight: 800;
   font-family: var(--font-display);
   margin-bottom: 14px;
@@ -598,7 +598,7 @@ section.alt {
   height: 44px;
   border-radius: 50%;
   background: linear-gradient(135deg, var(--gold), var(--magenta));
-  color: #1a0f26;
+  color: #1c1610;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -804,7 +804,7 @@ section.alt {
   height: 40px;
   border-radius: 10px;
   background: linear-gradient(135deg, var(--gold), var(--magenta));
-  color: #1a0f26;
+  color: #1c1610;
   display: flex;
   align-items: center;
   justify-content: center;
