@@ -98,14 +98,24 @@
       var subpanels = Array.prototype.slice.call(panelRoot.querySelectorAll('.subpanel'));
       if (!subpanels.length) return;
 
+      var lastKey = select.value;
+
       function activate(key) {
         subpanels.forEach(function (sp) {
           sp.classList.toggle('active', sp.getAttribute('data-subpanel') === key);
         });
         if (select.value !== key) select.value = key;
+        lastKey = key;
       }
 
       select.addEventListener('change', function () {
+        var option = select.options[select.selectedIndex];
+        var externalUrl = option.getAttribute('data-external-url');
+        if (externalUrl) {
+          window.open(externalUrl, '_blank', 'noopener');
+          select.value = lastKey;
+          return;
+        }
         activate(select.value);
       });
 
