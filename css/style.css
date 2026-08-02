@@ -567,6 +567,21 @@ section.alt {
   gap: 18px;
 }
 
+.grid-2 .card + .card,
+.grid-3 .card + .card {
+  margin-top: 0;
+}
+
+.grid-3 .card {
+  display: flex;
+  flex-direction: column;
+}
+
+.grid-3 .card > a {
+  margin-top: auto;
+  padding-top: 8px;
+}
+
 .icon-badge {
   width: 44px;
   height: 44px;
